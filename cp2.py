@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-from ydata_profiling import ProfileReport
-from streamlit_pandas_profiling import st_profile_report
 
 # Titre de l'application
 st.title("Analyse et Nettoyage de Données avec Streamlit")
@@ -25,11 +23,7 @@ if uploaded_file is not None:
     # Statistiques descriptives
     st.write("### Statistiques descriptives")
     st.write(df.describe())
-    
-    # Générer un rapport de profilage
-    st.write("### Rapport de Profiling")
-    profile = ProfileReport(df, title="Profiling Report", explorative=True)
-    st_profile_report(profile)
+
 
 
 
